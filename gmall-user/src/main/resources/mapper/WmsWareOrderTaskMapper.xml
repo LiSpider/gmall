@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.gmall.user.mapper.WmsWareOrderTaskMapper">
+  <resultMap id="BaseResultMap" type="com.atguigu.gmall.user.bean.WmsWareOrderTask">
+    <!--@mbg.generated-->
+    <!--@Table wms_ware_order_task-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="consignee" jdbcType="VARCHAR" property="consignee" />
+    <result column="consignee_tel" jdbcType="VARCHAR" property="consigneeTel" />
+    <result column="delivery_address" jdbcType="VARCHAR" property="deliveryAddress" />
+    <result column="order_comment" jdbcType="VARCHAR" property="orderComment" />
+    <result column="payment_way" jdbcType="VARCHAR" property="paymentWay" />
+    <result column="task_status" jdbcType="VARCHAR" property="taskStatus" />
+    <result column="order_body" jdbcType="VARCHAR" property="orderBody" />
+    <result column="tracking_no" jdbcType="VARCHAR" property="trackingNo" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="ware_id" jdbcType="BIGINT" property="wareId" />
+    <result column="task_comment" jdbcType="VARCHAR" property="taskComment" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, order_id, consignee, consignee_tel, delivery_address, order_comment, payment_way, 
+    task_status, order_body, tracking_no, create_time, ware_id, task_comment
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from wms_ware_order_task
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from wms_ware_order_task
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.atguigu.gmall.user.bean.WmsWareOrderTask" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into wms_ware_order_task (order_id, consignee, consignee_tel, 
+      delivery_address, order_comment, payment_way, 
+      task_status, order_body, tracking_no, 
+      create_time, ware_id, task_comment
+      )
+    values (#{orderId,jdbcType=INTEGER}, #{consignee,jdbcType=VARCHAR}, #{consigneeTel,jdbcType=VARCHAR}, 
+      #{deliveryAddress,jdbcType=VARCHAR}, #{orderComment,jdbcType=VARCHAR}, #{paymentWay,jdbcType=VARCHAR}, 
+      #{taskStatus,jdbcType=VARCHAR}, #{orderBody,jdbcType=VARCHAR}, #{trackingNo,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{wareId,jdbcType=BIGINT}, #{taskComment,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.atguigu.gmall.user.bean.WmsWareOrderTask" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into wms_ware_order_task
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="consignee != null">
+        consignee,
+      </if>
+      <if test="consigneeTel != null">
+        consignee_tel,
+      </if>
+      <if test="deliveryAddress != null">
+        delivery_address,
+      </if>
+      <if test="orderComment != null">
+        order_comment,
+      </if>
+      <if test="paymentWay != null">
+        payment_way,
+      </if>
+      <if test="taskStatus != null">
+        task_status,
+      </if>
+      <if test="orderBody != null">
+        order_body,
+      </if>
+      <if test="trackingNo != null">
+        tracking_no,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="wareId != null">
+        ware_id,
+      </if>
+      <if test="taskComment != null">
+        task_comment,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="consignee != null">
+        #{consignee,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeTel != null">
+        #{consigneeTel,jdbcType=VARCHAR},
+      </if>
+      <if test="deliveryAddress != null">
+        #{deliveryAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="orderComment != null">
+        #{orderComment,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentWay != null">
+        #{paymentWay,jdbcType=VARCHAR},
+      </if>
+      <if test="taskStatus != null">
+        #{taskStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="orderBody != null">
+        #{orderBody,jdbcType=VARCHAR},
+      </if>
+      <if test="trackingNo != null">
+        #{trackingNo,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wareId != null">
+        #{wareId,jdbcType=BIGINT},
+      </if>
+      <if test="taskComment != null">
+        #{taskComment,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.atguigu.gmall.user.bean.WmsWareOrderTask">
+    <!--@mbg.generated-->
+    update wms_ware_order_task
+    <set>
+      <if test="orderId != null">
+        order_id = #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="consignee != null">
+        consignee = #{consignee,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeTel != null">
+        consignee_tel = #{consigneeTel,jdbcType=VARCHAR},
+      </if>
+      <if test="deliveryAddress != null">
+        delivery_address = #{deliveryAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="orderComment != null">
+        order_comment = #{orderComment,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentWay != null">
+        payment_way = #{paymentWay,jdbcType=VARCHAR},
+      </if>
+      <if test="taskStatus != null">
+        task_status = #{taskStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="orderBody != null">
+        order_body = #{orderBody,jdbcType=VARCHAR},
+      </if>
+      <if test="trackingNo != null">
+        tracking_no = #{trackingNo,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wareId != null">
+        ware_id = #{wareId,jdbcType=BIGINT},
+      </if>
+      <if test="taskComment != null">
+        task_comment = #{taskComment,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.atguigu.gmall.user.bean.WmsWareOrderTask">
+    <!--@mbg.generated-->
+    update wms_ware_order_task
+    set order_id = #{orderId,jdbcType=INTEGER},
+      consignee = #{consignee,jdbcType=VARCHAR},
+      consignee_tel = #{consigneeTel,jdbcType=VARCHAR},
+      delivery_address = #{deliveryAddress,jdbcType=VARCHAR},
+      order_comment = #{orderComment,jdbcType=VARCHAR},
+      payment_way = #{paymentWay,jdbcType=VARCHAR},
+      task_status = #{taskStatus,jdbcType=VARCHAR},
+      order_body = #{orderBody,jdbcType=VARCHAR},
+      tracking_no = #{trackingNo,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      ware_id = #{wareId,jdbcType=BIGINT},
+      task_comment = #{taskComment,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
