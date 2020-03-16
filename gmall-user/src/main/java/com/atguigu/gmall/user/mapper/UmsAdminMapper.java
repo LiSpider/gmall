@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsAdmin;
+import com.atguigu.gmall.bean.UmsAdmin;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsAdminMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsAdmin record);
-
-    int insertSelective(UmsAdmin record);
-
-    UmsAdmin selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsAdmin record);
-
-    int updateByPrimaryKey(UmsAdmin record);
+public interface UmsAdminMapper extends Mapper<UmsAdmin> {
 }

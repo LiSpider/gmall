@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsMemberTask;
+import com.atguigu.gmall.bean.UmsMemberTask;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsMemberTaskMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsMemberTask record);
-
-    int insertSelective(UmsMemberTask record);
-
-    UmsMemberTask selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsMemberTask record);
-
-    int updateByPrimaryKey(UmsMemberTask record);
+public interface UmsMemberTaskMapper extends Mapper<UmsMemberTask> {
 }

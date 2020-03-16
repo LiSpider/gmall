@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.SmsCouponProductCategoryRelation;
+import com.atguigu.gmall.bean.SmsCouponProductCategoryRelation;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface SmsCouponProductCategoryRelationMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(SmsCouponProductCategoryRelation record);
-
-    int insertSelective(SmsCouponProductCategoryRelation record);
-
-    SmsCouponProductCategoryRelation selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SmsCouponProductCategoryRelation record);
-
-    int updateByPrimaryKey(SmsCouponProductCategoryRelation record);
+public interface SmsCouponProductCategoryRelationMapper extends Mapper<SmsCouponProductCategoryRelation> {
 }

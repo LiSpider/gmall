@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsMemberStatisticsInfo;
+import com.atguigu.gmall.bean.UmsMemberStatisticsInfo;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsMemberStatisticsInfoMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsMemberStatisticsInfo record);
-
-    int insertSelective(UmsMemberStatisticsInfo record);
-
-    UmsMemberStatisticsInfo selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsMemberStatisticsInfo record);
-
-    int updateByPrimaryKey(UmsMemberStatisticsInfo record);
+public interface UmsMemberStatisticsInfoMapper extends Mapper<UmsMemberStatisticsInfo> {
 }

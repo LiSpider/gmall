@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsProductImage;
+import com.atguigu.gmall.bean.PmsProductImage;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsProductImageMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(PmsProductImage record);
-
-    int insertSelective(PmsProductImage record);
-
-    PmsProductImage selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(PmsProductImage record);
-
-    int updateByPrimaryKey(PmsProductImage record);
+public interface PmsProductImageMapper extends Mapper<PmsProductImage> {
 }

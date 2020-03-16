@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.WmsWareOrderTask;
+import com.atguigu.gmall.bean.WmsWareOrderTask;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface WmsWareOrderTaskMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(WmsWareOrderTask record);
-
-    int insertSelective(WmsWareOrderTask record);
-
-    WmsWareOrderTask selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(WmsWareOrderTask record);
-
-    int updateByPrimaryKey(WmsWareOrderTask record);
+public interface WmsWareOrderTaskMapper extends Mapper<WmsWareOrderTask> {
 }

@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.SmsCouponHistory;
+import com.atguigu.gmall.bean.SmsCouponHistory;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface SmsCouponHistoryMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(SmsCouponHistory record);
-
-    int insertSelective(SmsCouponHistory record);
-
-    SmsCouponHistory selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SmsCouponHistory record);
-
-    int updateByPrimaryKey(SmsCouponHistory record);
+public interface SmsCouponHistoryMapper extends Mapper<SmsCouponHistory> {
 }

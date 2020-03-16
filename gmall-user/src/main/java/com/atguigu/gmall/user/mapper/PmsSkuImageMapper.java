@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsSkuImage;
+import com.atguigu.gmall.bean.PmsSkuImage;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsSkuImageMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(PmsSkuImage record);
-
-    int insertSelective(PmsSkuImage record);
-
-    PmsSkuImage selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(PmsSkuImage record);
-
-    int updateByPrimaryKey(PmsSkuImage record);
+public interface PmsSkuImageMapper extends Mapper<PmsSkuImage> {
 }

@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsRole;
+import com.atguigu.gmall.bean.UmsRole;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsRoleMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsRole record);
-
-    int insertSelective(UmsRole record);
-
-    UmsRole selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsRole record);
-
-    int updateByPrimaryKey(UmsRole record);
+public interface UmsRoleMapper extends Mapper<UmsRole> {
 }

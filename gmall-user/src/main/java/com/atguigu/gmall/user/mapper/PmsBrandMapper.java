@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsBrand;
+import com.atguigu.gmall.bean.PmsBrand;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsBrandMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(PmsBrand record);
-
-    int insertSelective(PmsBrand record);
-
-    PmsBrand selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(PmsBrand record);
-
-    int updateByPrimaryKey(PmsBrand record);
+public interface PmsBrandMapper extends Mapper<PmsBrand> {
 }

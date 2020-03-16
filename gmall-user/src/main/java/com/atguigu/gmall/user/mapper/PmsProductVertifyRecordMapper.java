@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsProductVertifyRecord;
+import com.atguigu.gmall.bean.PmsProductVertifyRecord;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsProductVertifyRecordMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(PmsProductVertifyRecord record);
-
-    int insertSelective(PmsProductVertifyRecord record);
-
-    PmsProductVertifyRecord selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(PmsProductVertifyRecord record);
-
-    int updateByPrimaryKey(PmsProductVertifyRecord record);
+public interface PmsProductVertifyRecordMapper extends Mapper<PmsProductVertifyRecord> {
 }

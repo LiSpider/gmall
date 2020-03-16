@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsMemberTag;
+import com.atguigu.gmall.bean.UmsMemberTag;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsMemberTagMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsMemberTag record);
-
-    int insertSelective(UmsMemberTag record);
-
-    UmsMemberTag selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsMemberTag record);
-
-    int updateByPrimaryKey(UmsMemberTag record);
+public interface UmsMemberTagMapper extends Mapper<UmsMemberTag> {
 }

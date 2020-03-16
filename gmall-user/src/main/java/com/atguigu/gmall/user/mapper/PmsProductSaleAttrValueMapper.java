@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsProductSaleAttrValue;
+import com.atguigu.gmall.bean.PmsProductSaleAttrValue;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsProductSaleAttrValueMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(PmsProductSaleAttrValue record);
-
-    int insertSelective(PmsProductSaleAttrValue record);
-
-    PmsProductSaleAttrValue selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(PmsProductSaleAttrValue record);
-
-    int updateByPrimaryKey(PmsProductSaleAttrValue record);
+public interface PmsProductSaleAttrValueMapper extends Mapper<PmsProductSaleAttrValue> {
 }

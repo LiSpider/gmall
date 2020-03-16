@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.SmsFlashPromotion;
+import com.atguigu.gmall.bean.SmsFlashPromotion;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface SmsFlashPromotionMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(SmsFlashPromotion record);
-
-    int insertSelective(SmsFlashPromotion record);
-
-    SmsFlashPromotion selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SmsFlashPromotion record);
-
-    int updateByPrimaryKey(SmsFlashPromotion record);
+public interface SmsFlashPromotionMapper extends Mapper<SmsFlashPromotion> {
 }

@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.CmsHelp;
+import com.atguigu.gmall.bean.CmsHelp;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface CmsHelpMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(CmsHelp record);
-
-    int insertSelective(CmsHelp record);
-
-    CmsHelp selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(CmsHelp record);
-
-    int updateByPrimaryKey(CmsHelp record);
+public interface CmsHelpMapper extends Mapper<CmsHelp> {
 }

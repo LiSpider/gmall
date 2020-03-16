@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsRolePermissionRelation;
+import com.atguigu.gmall.bean.UmsRolePermissionRelation;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsRolePermissionRelationMapper {
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(UmsRolePermissionRelation record);
-
-    int insertSelective(UmsRolePermissionRelation record);
-
-    UmsRolePermissionRelation selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(UmsRolePermissionRelation record);
-
-    int updateByPrimaryKey(UmsRolePermissionRelation record);
+public interface UmsRolePermissionRelationMapper extends Mapper<UmsRolePermissionRelation> {
 }

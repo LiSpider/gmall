@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsAdminLoginLog;
+import com.atguigu.gmall.bean.UmsAdminLoginLog;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsAdminLoginLogMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsAdminLoginLog record);
-
-    int insertSelective(UmsAdminLoginLog record);
-
-    UmsAdminLoginLog selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsAdminLoginLog record);
-
-    int updateByPrimaryKey(UmsAdminLoginLog record);
+public interface UmsAdminLoginLogMapper extends Mapper<UmsAdminLoginLog> {
 }

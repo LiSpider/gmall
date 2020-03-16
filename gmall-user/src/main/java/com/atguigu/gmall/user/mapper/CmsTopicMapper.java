@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.CmsTopic;
+import com.atguigu.gmall.bean.CmsTopic;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface CmsTopicMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(CmsTopic record);
-
-    int insertSelective(CmsTopic record);
-
-    CmsTopic selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(CmsTopic record);
-
-    int updateByPrimaryKey(CmsTopic record);
+public interface CmsTopicMapper extends Mapper<CmsTopic> {
 }

@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.SmsFlashPromotionProductRelation;
+import com.atguigu.gmall.bean.SmsFlashPromotionProductRelation;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface SmsFlashPromotionProductRelationMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(SmsFlashPromotionProductRelation record);
-
-    int insertSelective(SmsFlashPromotionProductRelation record);
-
-    SmsFlashPromotionProductRelation selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SmsFlashPromotionProductRelation record);
-
-    int updateByPrimaryKey(SmsFlashPromotionProductRelation record);
+public interface SmsFlashPromotionProductRelationMapper extends Mapper<SmsFlashPromotionProductRelation> {
 }

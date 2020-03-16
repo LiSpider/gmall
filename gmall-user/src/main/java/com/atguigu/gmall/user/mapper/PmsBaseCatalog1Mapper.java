@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsBaseCatalog1;
+import com.atguigu.gmall.bean.PmsBaseCatalog1;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsBaseCatalog1Mapper {
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(PmsBaseCatalog1 record);
-
-    int insertSelective(PmsBaseCatalog1 record);
-
-    PmsBaseCatalog1 selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(PmsBaseCatalog1 record);
-
-    int updateByPrimaryKey(PmsBaseCatalog1 record);
+public interface PmsBaseCatalog1Mapper extends Mapper<PmsBaseCatalog1> {
 }

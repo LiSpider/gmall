@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.CmsSubjectCategory;
+import com.atguigu.gmall.bean.CmsSubjectCategory;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface CmsSubjectCategoryMapper {
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(CmsSubjectCategory record);
-
-    int insertSelective(CmsSubjectCategory record);
-
-    CmsSubjectCategory selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(CmsSubjectCategory record);
-
-    int updateByPrimaryKey(CmsSubjectCategory record);
+public interface CmsSubjectCategoryMapper extends Mapper<CmsSubjectCategory> {
 }

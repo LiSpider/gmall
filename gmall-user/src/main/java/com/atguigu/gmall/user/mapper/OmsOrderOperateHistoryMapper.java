@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.OmsOrderOperateHistory;
+import com.atguigu.gmall.bean.OmsOrderOperateHistory;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface OmsOrderOperateHistoryMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(OmsOrderOperateHistory record);
-
-    int insertSelective(OmsOrderOperateHistory record);
-
-    OmsOrderOperateHistory selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(OmsOrderOperateHistory record);
-
-    int updateByPrimaryKey(OmsOrderOperateHistory record);
+public interface OmsOrderOperateHistoryMapper extends Mapper<OmsOrderOperateHistory> {
 }

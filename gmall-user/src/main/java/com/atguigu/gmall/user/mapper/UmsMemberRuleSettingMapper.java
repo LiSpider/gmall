@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsMemberRuleSetting;
+import com.atguigu.gmall.bean.UmsMemberRuleSetting;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsMemberRuleSettingMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsMemberRuleSetting record);
-
-    int insertSelective(UmsMemberRuleSetting record);
-
-    UmsMemberRuleSetting selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsMemberRuleSetting record);
-
-    int updateByPrimaryKey(UmsMemberRuleSetting record);
+public interface UmsMemberRuleSettingMapper extends Mapper<UmsMemberRuleSetting> {
 }

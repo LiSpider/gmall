@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.SmsHomeRecommendProduct;
+import com.atguigu.gmall.bean.SmsHomeRecommendProduct;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface SmsHomeRecommendProductMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(SmsHomeRecommendProduct record);
-
-    int insertSelective(SmsHomeRecommendProduct record);
-
-    SmsHomeRecommendProduct selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SmsHomeRecommendProduct record);
-
-    int updateByPrimaryKey(SmsHomeRecommendProduct record);
+public interface SmsHomeRecommendProductMapper extends Mapper<SmsHomeRecommendProduct> {
 }

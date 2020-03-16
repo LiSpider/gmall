@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.SmsHomeNewProduct;
+import com.atguigu.gmall.bean.SmsHomeNewProduct;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface SmsHomeNewProductMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(SmsHomeNewProduct record);
-
-    int insertSelective(SmsHomeNewProduct record);
-
-    SmsHomeNewProduct selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SmsHomeNewProduct record);
-
-    int updateByPrimaryKey(SmsHomeNewProduct record);
+public interface SmsHomeNewProductMapper extends Mapper<SmsHomeNewProduct> {
 }

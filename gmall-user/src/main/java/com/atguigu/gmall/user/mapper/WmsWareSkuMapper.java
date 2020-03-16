@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.WmsWareSku;
+import com.atguigu.gmall.bean.WmsWareSku;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface WmsWareSkuMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(WmsWareSku record);
-
-    int insertSelective(WmsWareSku record);
-
-    WmsWareSku selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(WmsWareSku record);
-
-    int updateByPrimaryKey(WmsWareSku record);
+public interface WmsWareSkuMapper extends Mapper<WmsWareSku> {
 }

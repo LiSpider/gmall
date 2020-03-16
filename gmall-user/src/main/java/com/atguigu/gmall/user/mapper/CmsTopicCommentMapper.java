@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.CmsTopicComment;
+import com.atguigu.gmall.bean.CmsTopicComment;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface CmsTopicCommentMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(CmsTopicComment record);
-
-    int insertSelective(CmsTopicComment record);
-
-    CmsTopicComment selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(CmsTopicComment record);
-
-    int updateByPrimaryKey(CmsTopicComment record);
+public interface CmsTopicCommentMapper extends Mapper<CmsTopicComment> {
 }

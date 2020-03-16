@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsProductOperateLog;
+import com.atguigu.gmall.bean.PmsProductOperateLog;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsProductOperateLogMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(PmsProductOperateLog record);
-
-    int insertSelective(PmsProductOperateLog record);
-
-    PmsProductOperateLog selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(PmsProductOperateLog record);
-
-    int updateByPrimaryKey(PmsProductOperateLog record);
+public interface PmsProductOperateLogMapper extends Mapper<PmsProductOperateLog> {
 }

@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.UmsGrowthChangeHistory;
+import com.atguigu.gmall.bean.UmsGrowthChangeHistory;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface UmsGrowthChangeHistoryMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(UmsGrowthChangeHistory record);
-
-    int insertSelective(UmsGrowthChangeHistory record);
-
-    UmsGrowthChangeHistory selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(UmsGrowthChangeHistory record);
-
-    int updateByPrimaryKey(UmsGrowthChangeHistory record);
+public interface UmsGrowthChangeHistoryMapper extends Mapper<UmsGrowthChangeHistory> {
 }

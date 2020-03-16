@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.CmsSubjectProductRelation;
+import com.atguigu.gmall.bean.CmsSubjectProductRelation;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface CmsSubjectProductRelationMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(CmsSubjectProductRelation record);
-
-    int insertSelective(CmsSubjectProductRelation record);
-
-    CmsSubjectProductRelation selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(CmsSubjectProductRelation record);
-
-    int updateByPrimaryKey(CmsSubjectProductRelation record);
+public interface CmsSubjectProductRelationMapper extends Mapper<CmsSubjectProductRelation> {
 }

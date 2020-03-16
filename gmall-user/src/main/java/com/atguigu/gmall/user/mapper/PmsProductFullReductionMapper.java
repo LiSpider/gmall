@@ -1,17 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.PmsProductFullReduction;
+import com.atguigu.gmall.bean.PmsProductFullReduction;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface PmsProductFullReductionMapper {
-    int deleteByPrimaryKey(Long id);
-
-    int insert(PmsProductFullReduction record);
-
-    int insertSelective(PmsProductFullReduction record);
-
-    PmsProductFullReduction selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(PmsProductFullReduction record);
-
-    int updateByPrimaryKey(PmsProductFullReduction record);
+public interface PmsProductFullReductionMapper extends Mapper<PmsProductFullReduction> {
 }

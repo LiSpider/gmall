@@ -1,9 +1,7 @@
 package com.atguigu.gmall.user.mapper;
 
-import com.atguigu.gmall.user.bean.CmsMemberReport;
+import com.atguigu.gmall.bean.CmsMemberReport;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface CmsMemberReportMapper {
-    int insert(CmsMemberReport record);
-
-    int insertSelective(CmsMemberReport record);
+public interface CmsMemberReportMapper extends Mapper<CmsMemberReport> {
 }
