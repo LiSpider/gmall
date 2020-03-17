@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  dubbo:
+    #dubbo服务的扫描路径
+    base-package: com.atguigu.gmall
+    #dubbo中的服务名称
+    application: user-web
+    protocol:
+      #dubbo通讯协议名称
+      name: dubbo
+    consumer:
+      #设置超时时间
+      timeout: 600000
+      #设置检查服务是否存在
+      check: false
+    registry:
+      #zookeeper注册中心的地址
+      address: 192.168.174.145:2181
+      #zookeeper通讯协议名称
+      protocol: zookeeper
+
+#日志级别
+logging:
+  level:
+    root: debug
+
